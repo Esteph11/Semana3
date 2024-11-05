@@ -4,20 +4,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">  
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/index.css">
-    <title>Notas</title>
+    <title>Convertidor de medidas</title>
 </head>
 
 <body>
-    
+    <div class="container mt-5">
+        <h2>Conversor de medidas</h2>
+        <div class="row" id="conversion">
+            <div class="card mt-4 p-4">
+                <div class="row">
+                    <div class="col-5 mb-3">
+                        <label class="form-label" for="km">Kilómetros (Km):</label>
+                        <input type="number" class="form-control" id="km" />
+                    </div>
+                    <div class="col-2 mb-3 text-center align-self-center">
+                        <h3>=</h3>
+                    </div>
+                    <div class="col-5 mb-3">
+                        <label class="form-label" for="m">Metros (m):</label>
+                        <input type="number" class="form-control" id="ms" readonly />
+                    </div>
+                </div>
+            </div>
+            <div class="card mt-4 p-4">
+                <div class="row">
+                    <div class="col-5 mb-3">
+                        <label class="form-label" for="km">Metros (m):</label>
+                        <input type="number" class="form-control" id="m" />
+                    </div>
+                    <div class="col-2 mb-3 text-center align-self-center">
+                        <h3>=</h3>
+                    </div>
+                    <div class="col-5 mb-3">
+                        <label class="form-label" for="m">Centímetros (cm):</label>
+                        <input type="number" class="form-control" id="cm" readonly />
+                    </div>
+                </div>
+            </div>
+            <div class="card mt-4 p-4">
+                <div class="row">
+                    <div class="col-5 mb-3">
+                        <label class="form-label" for="ft">Pies (ft):</label>
+                        <input type="number" class="form-control" id="ft" />
+                    </div>
+                    <div class="col-2 mb-3 text-center align-self-center">
+                        <h3>=</h3>
+                    </div>
+                    <div class="col-5 mb-3">
+                        <label class="form-label" for="ft">Pulgadas (pulg):</label>
+                        <input type="number" class="form-control" id="pulg" readonly />
+                    </div>
+                </div>
+            </div>
+            <div class="card mt-4 p-4">
+                <div class="row">
+                    <div class="col-5 mb-3">
+                        <label class="form-label" for="yd">Yardas (yd):</label>
+                        <input type="number" class="form-control" id="yd" />
+                    </div>
+                    <div class="col-2 mb-3 text-center align-self-center">
+                        <h3>=</h3>
+                    </div>
+                    <div class="col-5 mb-3">
+                        <label class="form-label" for="yd">Pulgadas (pulg):</label>
+                        <input type="number" class="form-control" id="pulgs" readonly />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <button type="submit" class="btn btn-primary">Convertir</button> -->
 
-    <script src="js/index.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <div class="row">
+            <div class="mb-3 col-6 mt-3">
+                <button class="btn btn-success" onclick="convertir()">Convertir</button>
+                <button class="btn btn-danger" onclick="limpiar()">Limpiar</button>
+            </div>
+        </div>
+
+
+        <script src="js/index.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>
